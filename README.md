@@ -1,6 +1,6 @@
 # An Analysis of Kings County Housing Prices
 
-<img src ='images/Zipcodes.png' width =150%>
+<img src ='images/Zipcodes.png'>
 
 
 <h2>Purpose</h2>
