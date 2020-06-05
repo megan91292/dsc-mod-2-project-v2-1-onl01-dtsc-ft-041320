@@ -73,13 +73,13 @@ The following features were also created:
 <h2> Exploring</h2>
 I explored all the data, and made visualisations to provide insights. I focused on the following 3 questions.
 
-<h3>Question 1: How are Houses in Kings County Distributed and the effect of Zipcodes on price?</h3>
+<h4>Question 1: How are Houses in Kings County Distributed and the effect of Zipcodes on price?</h4>
 Yes, zipcodes directly surrounding Bellevue have higher counts of houses than zip  codes further out.
 <br>
  <br>
 <img src ='images/mapwithcounts.png'>
 
-<h5> Do House Prices vary by Zipcode?</h5>
+<h6> Do House Prices vary by Zipcode?</h6>
 From below, it is clear that the average house price is very different based on the zipcode 
 <br>
 
@@ -92,25 +92,25 @@ With houses in the south of the county being cheaper
 
 
 <br>  <br>
-<h3>Question 2: Does distance from the city have an affect on House Price?</h3>
+<h4>Question 2: Does distance from the city have an affect on House Price?</h4>
 <img src ='images/DistanceVsPrice.png'>
 
-<h5> Conclusion:</h5>
+<h6> Conclusion:</h6>
 * It is clear that houses above 1milllion are located withing 20km of Bellevue
 
 *  Houses above $1million are located within 20km of Bellevue
 * The further away from the City, the lower the average hosus eprice.
 
-<h5> Simply Regression Model:</h5>
+<h6> Simply Regression Model:</h6>
 
 An increase in 1km from the city results in a decrease in price by  USD 12,264
 <br>   <br>
 <img src ='images/distancereg.png'>
 
 <br>   <br>
-<h2>Question 3: Are Waterfront properties more expensive?</h2>
+<h4>Question 3: Are Waterfront properties more expensive?</h4>
 
-<h5>Findings:</h5>
+<h6>Findings:</h6>
 Yes, it is clear waterfront properties are more expensive
 
 The mean and median price of a waterfront home is  USD1.7m and USD 1.5m respectively.
@@ -125,8 +125,35 @@ This massive disparity in price is most likely down to how little waterfront pro
 <br>  <br>
 <img src ='images/waterfront_outliers.png'> 
 
+<h2> Modelling </h2>
+I chose to take Box Cox transformations of the following features :
+<ul>
+<li>Sqft_lot</li>
+<li> Sqft_living </li>
+<li> Distance from a City </li>
+</ul>
+All features were normalized using z-scores
 
 
+
+\[\frac{x - \mu}{\sigma}\]
+
+
+
+
+The final equation for price is as follows:
+
+\[Price = -12506\times Bedrooms + 3849\times Bathrooms + 84541\times Sqft_{living}+ 24\times Sqft_{loft} \]
+\[ -109135\times Distance_{city} + 429646\times grade4 + 410804\times grade5  + 400781\times grade 6 \]
+\[441474\times grade7 +499282\times grade8 + 588835\times grade9 + 648431\times grade10 + 707515\times grade11 \]
+
+
+<img src ='images/model.png'>
+
+<h2> Interpret </h2>
+
+
+The Model works by taking a base price for the home depending on the grade. It then add sto the price for bathooms, sqft lviing and sqft lot , and subtracts for bedrooms and distance from the city
 
 <h2>Future Work</h2>
 <ol>
