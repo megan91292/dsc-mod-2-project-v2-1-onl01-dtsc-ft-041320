@@ -148,7 +148,7 @@ The final equation for price is as follows:
 \[441474\times grade7 +499282\times grade8 + 588835\times grade9 + 648431\times grade10 + 707515\times grade11 \]
 
 
-<img src ='images/model.png'>
+<img src ='images/Model.png'>
 
 <h2> Interpret </h2>
 
