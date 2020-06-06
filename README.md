@@ -77,6 +77,8 @@ I explored all the data, and made visualisations to provide insights. I focused 
 Yes, zipcodes directly surrounding Bellevue have higher counts of houses than zip  codes further out.
 <br>
  <br>
+ <img src ='images/Count-Legend.png'>
+
 <img src ='images/mapwithcounts.png'>
 
 <h6> Do House Prices vary by Zipcode?</h6>
@@ -87,9 +89,12 @@ From below, it is clear that the average house price is very different based on 
 
 Houses in the North of the County, notably surrounding bellevue, are the most expensive.
 With houses in the south of the county being cheaper
+ <img src ='images/Legend-Price.png'>
 
 <img src ='images/mapwithprice.png'>
 
+<h6>Recomendation:</h6>
+Choose which Zip codes to look at based on budget.
 
 <br>  <br>
 <h4>Question 2: Does distance from the city have an affect on House Price?</h4>
@@ -106,6 +111,8 @@ With houses in the south of the county being cheaper
 An increase in 1km from the city results in a decrease in price by  USD 12,264
 <br>   <br>
 <img src ='images/distancereg.png'>
+<h6>Recomendation:</h6>
+Buy homes within 15km of the city.
 
 <br>   <br>
 <h4>Question 3: Are Waterfront properties more expensive?</h4>
@@ -153,12 +160,15 @@ The final equation for price is as follows:
 <h2> Interpret </h2>
 
 
-The Model works by taking a base price for the home depending on the grade. It then add sto the price for bathooms, sqft lviing and sqft lot , and subtracts for bedrooms and distance from the city
+The Model works by taking a base price for the home depending on the grade. It then makes positive adjustments for bathrooms, sqft_living, sqft_lot. Followed by negative adjustments for bedrooms and distance from the city.
+The R2 value of 0.701 means that the model accounts for 70% of the variance in price.
 
 <h2>Future Work</h2>
 <ol>
 <li>Zip code Feature - Create a boundary selector to enable the model to predict price depending on zip code</li>
 
-<li>More Data  - Collate data for the passed 20 years to see how 
+<li>More Data  - Collate data for the passed 20 years to see how </li>
+<li>Explore the effects of distance from a City on existence and size of a basement</li>
+
 </ol>
 
