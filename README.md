@@ -13,6 +13,7 @@ The purpose of this project is to investigate what features affect the price of 
 The Repo is split up into 6 folders 
 
 ```
+
 Questions:
 * Question 1.ipynb
     - How are Houses in Kings County Distributed and the effect of Zipcodes on price
@@ -47,6 +48,8 @@ Contains html files of maps created
 
 Images:
 * Contains array of images that are use in the powerpoint pdf
+
+The Repo also contains a .py file
 
 ```
 
